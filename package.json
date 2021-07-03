@@ -1,0 +1,25 @@
+{
+  "name": "natour",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/water-sect/Natour_website.git"
+  },
+  "author": "Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/water-sect/Natour_website/issues"
+  },
+  "homepage": "https://github.com/water-sect/Natour_website#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

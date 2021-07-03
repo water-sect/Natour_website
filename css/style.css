@@ -1,189 +1,136 @@
-/*
-COLORS:
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(10rem); }
+  80% {
+    transform: translate(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem); }
+  80% {
+    transform: translate(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
 
-*/
-*,
-::after,
-::before{
-    box-sizing: border-box;
-    margin: 0;padding: 0;
-  
-}
-html{
-    /* making global font size. */
-    /* font-size: 10px; */
-    /* font-size: 0.625em; */
-    font-size: 62.5%;
-}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0rem); } }
 
-body{     
-    font-family: "Lato", sans-serif,'Gill Sans', 'Gill Sans MT';
-    font-weight: 400; /* we have font-weight option in google font.*/
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color:#777 ;
-    padding: 3rem;
-}
-
-.header{  
-    position: relative;
-        
-    height: 95vh;
-    width: 100vw;
-    background: linear-gradient(to right bottom,
-    rgba(126, 213 , 111, 0.8),
-    rgba(40, 180, 131, 0.8)),
-    url(../img/hero.jpg) no-repeat top;
-    background-size: content;
-    
-    clip-path: polygon(0 0, 100% 0,100% 75vh, 0 100%);    
-}
-
-.logo-box{   
-    /* position: relative; */
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-} 
-.logo{
-    height: 3.5rem;
-    animation: moveInLeft 2s ease-out .1s;
-}
-
-.text-box{  
-    position: absolute;
-    top: 40%;
-    left: 50%;   
-    transform: translate(-50%,-50%);
-    text-align: center;
-    
-}
-
-.heading-primary{
-    color: #fff;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-}
-.heading-primary-main{ 
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 1.7rem;    
-    animation: moveInLeft 2s ease-out .1s;
-}
-.heading-primary-sub{    
+    letter-spacing: 1.7rem;
+    animation: moveInLeft 2s ease-out .1s; }
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.7rem;
+    animation: moveInRight 2s ease-out .1s; }
 
-    animation: moveInRight 2s ease-out .1s;
-}
+.btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 40rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
 
-.logo:hover{
-    animation: moveInRight 2s ease-out .1s;
-}
- 
-@keyframes moveInRight{
-    0%{ opacity: 0;
-        transform: translate(10rem);  
-    }
-
-    80%{
-        transform:translate(-1rem);
-    }
-   
-    100%{opacity: 1;
-        transform: translate(0rem);
-    }
-}
-@keyframes moveInLeft{
-    0%{ opacity: 0;
-        transform: translate(-10rem);  
-    }
-
-    80%{
-        transform:translate(1rem);
-    }
-   
-    100%{opacity: 1;
-        transform: translate(0rem);
-    }
-}
-@keyframes moveInBottom{
-    0%{ opacity: 0;
-        transform: translateY(10rem);  
-    }  
-
-    100%{opacity: 1;
-        transform: translate(0rem);
-    }
-}
-
-
-.btn:link, 
-.btn:visited{
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1.5rem 4rem;
-    display: inline-block;  
-    border-radius: 40rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-
-    /* animation: moveInBottom 2s */
-     /* It also worked without animation delay */
-    /* since .btn::after is position accn to this btn. and it doesn't appear here*/
-}
-.btn:hover{
-    /* transform: translate(0, -3px); */
-    transform: translateY(-0.3rem);
-    box-shadow:0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-.btn:active{
-    transform: translateY(-0.1rem);
-}
-
-.btn-white{  
-    background-color: #fff;  
-    color: #777;
-}
-
-.btn::after{
-    content: "";
-    display: inline-block;
-     /* since .btn is of inline-block.  */
-    border-radius: 10rem;
-
-    /* so that it takes full space available. */
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* To makes sure  */
-    z-index: -1; 
-    transition: all .4s;
-    
-} 
-
-.btn-white::after{
-    background-color: #fff;
-}
-
-.btn:hover::after {
+.btn:hover {
+  /* transform: translate(0, -3px); */
+  transform: translateY(-0.3rem);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
     /* transform: scale(1.4); */
     transform: scaleX(1.4) scaleY(2);
-    opacity: 0;
-}
-.btn-animated{
-    animation: moveInBottom .7s ease-out .75s;
-    animation-fill-mode:backwards;
-}
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.1rem); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  /* since .btn is of inline-block.  */
+  border-radius: 10rem;
+  /* so that it takes full space available. */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* To makes sure  */
+  z-index: -1;
+  transition: all .6s; }
+
+.btn--animated {
+  animation: moveInBottom .7s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  width: 90vw;
+  margin: auto;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg) no-repeat top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    transition: all .5s; }
+    .header__logo:hover {
+      transform: scale(1.4); }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  /* making global font size. */
+  /* font-size: 10px; */
+  /* font-size: 0.625em; */
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif,'Gill Sans', 'Gill Sans MT';
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
