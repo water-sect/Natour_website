@@ -1,0 +1,17 @@
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+  
+}
+html{
+    /* making global font size. */
+    /* font-size: 10px; */
+    /* font-size: 0.625em; */
+    font-size: 62.5%;
+}
+
+body{
+    padding: 3rem;
+}

@@ -1,3 +1,10 @@
+body{     
+    font-family: "Lato", sans-serif,'Gill Sans', 'Gill Sans MT';
+    font-weight: 400; 
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+
 .heading-primary{
     color: $color-white;
     text-transform: uppercase;
@@ -21,3 +28,4 @@
     }
 
 }
+
