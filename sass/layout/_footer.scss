@@ -1,0 +1,75 @@
+.footer{
+    padding: 10rem 0;
+    background-color: $color-grey-dark-3;
+    letter-spacing: 1px;
+    
+    // background-color:goldenrod;
+    font-size: 1.4rem;
+    &__logo-box{
+        // Note: The inline element just behave like text.
+        text-align: center;
+        margin-bottom: 8rem;
+        
+    }
+    &__logo{
+        // Note: The inline element just behave like text.
+        width: 15rem;
+        height: auto;
+    }
+    &__navigation{
+        
+        border-top: 1px solid $color-grey-dark;
+        padding-top: 2rem; 
+        // since we want to endupper border.
+        // inine-block takes as muchas widht of content.
+        display: inline-block;
+        transform: translateX(-2.5rem);
+    }
+
+    &__list{
+        list-style: none;
+    }
+    &__item{
+        // we want element side by side not as floated element.
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+        
+    }
+    &__link{
+        &:link,
+        &:visited{
+           
+            color:$color-grey-light-1;
+            background-color: $color-grey-dark-3;
+            text-decoration: none;            
+            
+            // To give margin. padding height and width.
+            display: inline-block;
+            transition: all .2s;
+        }
+        &:hover,
+        &:active{
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .4);
+            transform: rotate(5deg) scale(1.17);
+
+        }
+    }
+    &__copyright{
+        border-top: 1px solid $color-grey-dark;
+        // color:$color-grey-light-1;
+        // padding-top: 2rem;
+        // display: inline-block;
+        // margin-left: 11.7rem;
+
+        // since it was taking space below natour symbol.
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
+        letter-spacing: 1px;
+
+    }
+
+}
