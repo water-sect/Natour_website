@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Question: 
+
+How to minimize the size of components while some in hover state, 
+but that element is not in hover ?
+          
+
+
+Note: 
+         element minimize when someon got hover state.
+
+
+
+
+
+

@@ -1,17 +1,38 @@
-*,
-::after,
-::before{
-    box-sizing: border-box;
-    margin: 0;padding: 0;
-  
-}
-html{
-    /* making global font size. */
-    /* font-size: 10px; */
-    /* font-size: 0.625em; */
-    font-size: 62.5%;
+.section-about{
+    background-color: $color-grey-light-1;
+    // background-color:goldenrod;
+    padding: 25rem 0;
+    width: 90vw;
+    margin: -20vh auto 0  auto;
 }
 
-body{
-    padding: 3rem;
+.section-feature{    
+    padding: 25rem 0;
+    width: 90vw;
+    margin:-10rem auto 0 auto;
+
+   
+    background: linear-gradient(to right bottom,
+    rgba($color-primary-light,0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../img/nat-4.jpg) no-repeat top;
+    background-size: cover;
+        
+    transform:skewY(-7deg);
+
+
+    // Direct child here -- row 
+    // only select the first child and leave
+    //  other and grand child
+    & > *{
+        transform:skewY(7deg);
+    }    
+}
+
+.section-tour{
+    background-color: $color-grey-light-1;
+    // background-color:goldenrod;
+    width: 90vw;
+    padding: 25rem 0 50rem 0;
+    margin: -10rem auto 0 auto;
 }

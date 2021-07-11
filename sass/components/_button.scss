@@ -8,7 +8,7 @@
     border-radius: 40rem;
     transition: all .2s;
     position: relative;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     }
 
     &:hover{
@@ -50,14 +50,37 @@
         left: 0;
         /* To makes sure  */
         z-index: -1; 
-        transition: all .6s;
-        
-    } 
-    
-    
+        transition: all .6s;        
+    }     
     
     &--animated{
         animation: moveInBottom .7s ease-out .75s;
         animation-fill-mode:backwards;
+    }
+}
+
+
+.btn-text{
+    &:link,&:visited{
+        text-decoration: none;
+        text-transform: uppercase;        
+        display: inline-block;  
+        border-bottom:1px solid $color-primary;
+        padding:3px;
+        position: relative;
+        font-size: $default-font-size;
+        color: $color-primary;
+        transition: all .2s;
+    }
+    
+    &:hover{
+        background-color:$color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem .5rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+    &:active{
+        box-shadow: 0 1rem .5rem rgba($color-black, .15);
+        transform: translateY(0);
     }
 }

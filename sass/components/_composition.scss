@@ -1,0 +1,39 @@
+.composition{
+    position: relative;
+    background-color: goldenrod;
+    transition: all 0.2s;
+    
+    &__photo{       
+        width: 55%;
+        box-shadow:0 1.5rem 3rem rgba($color-black, 0.4);
+        // border-radius: 2px;      
+        z-index: 10;
+        position: absolute;
+        transition: all 0.2s;
+        outline-offset: 2rem;
+
+            // Question cant give height in % ?.
+            &--p1{
+                top:-2rem;
+                left: 0;
+            }
+            &--p2{
+               right: 0;
+               top: 2rem;
+            }
+            &--p3{
+               left: 20%;
+               top: 10rem;
+            }
+            &:hover{
+                outline: 1rem solid $color-primary;
+                box-shadow:0 2rem 3rem rgba($color-black, 0.5);
+                transform: scale(1.05) translateY(-.5rem);
+                z-index: 20;                
+            }
+        }
+        // To make photo smaller when not :hover
+        &:hover &__photo:not(:hover){
+            transform: scale(.95);
+        }
+    }
